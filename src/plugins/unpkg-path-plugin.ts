@@ -34,8 +34,9 @@ export const unpkgPathPlugin = () => {
           return {
             loader: "jsx",
             contents: `
-              const message = require('nested-test-pkg');
-              console.log(message);
+              const react = require('react');
+              const reactDom = require('react-dom');
+              console.log(react, reactDom);
             `,
           };
         }
@@ -45,6 +46,7 @@ export const unpkgPathPlugin = () => {
         return {
           loader: "jsx",
           contents: data,
+          // resolveDir provides a dirtory for the current file.
           resolveDir: new URL("./", request.responseURL).pathname,
         };
       });
