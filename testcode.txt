@@ -1,3 +1,9 @@
+
+// packages
 const react = require('react');
 const nestedPackage = require('nested-test-pkg');
 console.log(nestedPackage, react);
+
+
+// css
+import 'bulma/css/bulma.css';
