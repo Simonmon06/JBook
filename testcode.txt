@@ -9,3 +9,4 @@ console.log(nestedPackage, react);
 import 'bulma/css/bulma.css';
 
 
+--legacy-peer-deps
