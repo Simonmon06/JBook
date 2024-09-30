@@ -14,14 +14,16 @@ const CodeCell = () => {
 
   return (
     <Resizable direction="vertical">
-      <div>
-        <CodeEditor
-          initialValue="const a = 1;"
-          onChange={(value) => setInput(value)}
-        />
-        <div>
+      <div style={{ height: "100%", display: "flex", flexDirection: "row" }}>
+        <Resizable direction="horizontal">
+          <CodeEditor
+            initialValue="const a = 1;"
+            onChange={(value) => setInput(value)}
+          />
+        </Resizable>
+        {/* <div>
           <button onClick={onClick}>Submit</button>
-        </div>
+        </div> */}
         <Preview code={code} />
       </div>
     </Resizable>
