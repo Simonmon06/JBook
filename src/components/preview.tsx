@@ -28,6 +28,7 @@ const html = `
 const Preview: React.FC<PreviewProps> = ({ code }) => {
   const iframe = useRef<any>();
 
+  // setTimeOut fix the bug that the output show and disappear immediately
   useEffect(() => {
     iframe.current.srcdoc = html;
     setTimeout(() => {
