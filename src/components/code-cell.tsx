@@ -6,12 +6,14 @@ import Resizable from "./resizable";
 const CodeCell = () => {
   const [code, setCode] = useState("");
   const [input, setInput] = useState("");
+  const [error, setError] = useState("");
 
   // when user stop typing for 1s, run the code.
   useEffect(() => {
     const timer = setTimeout(async () => {
       const output = await bundle(input);
-      setCode(output);
+      setCode(output.code);
+      setError(output.error);
     }, 1000);
 
     return () => {
@@ -21,7 +23,8 @@ const CodeCell = () => {
 
   const onClick = async () => {
     const output = await bundle(input);
-    setCode(output);
+    setCode(output.code);
+    setError(output.error);
   };
 
   return (
@@ -36,7 +39,7 @@ const CodeCell = () => {
         {/* <div>
           <button onClick={onClick}>Submit</button>
         </div> */}
-        <Preview code={code} />
+        <Preview code={code} error={error} />
       </div>
     </Resizable>
   );
