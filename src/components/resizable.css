@@ -24,3 +24,6 @@
   display: flex;
   flex-direction: row;
 }
+
+.text-editor .w-md-editor-bar {
+}
