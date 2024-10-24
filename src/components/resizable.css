@@ -5,6 +5,11 @@
   background-position: 50%;
 }
 
+.resize-horizontal {
+  display: flex;
+  flex-direction: row;
+}
+
 .react-resizable-handle-s {
   height: 10px;
   width: 100%;
@@ -18,12 +23,4 @@
   height: 100%;
   cursor: col-resize;
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==");
-}
-
-.resize-horizontal {
-  display: flex;
-  flex-direction: row;
-}
-
-.text-editor .w-md-editor-bar {
 }
