@@ -68,7 +68,8 @@ const cellsReducer = produce(
       default:
         return state;
     }
-  }
+  },
+  initialState
 );
 
 // const cellsReducer = (
