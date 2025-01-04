@@ -40,6 +40,8 @@ const html = `
   `;
 
 const Preview: React.FC<PreviewProps> = ({ code, error }) => {
+  console.log("code:", code);
+  console.log("error:", error);
   const iframe = useRef<any>();
 
   // setTimeOut fix the bug that the output show and disappear immediately
